@@ -17,6 +17,9 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
 #define BASE 0
 #define NAV  1
 #define SYM  2
@@ -24,6 +27,17 @@
 #define MO1  4
 //#define TVP1 4
 //#define TVP2 5
+
+
+&mmv {
+    time-to-max-speed-ms = <200>;
+    acceleration-exponent = <2>;
+};
+
+&msc {
+    time-to-max-speed-ms = <200>;
+    acceleration-exponent = <2>;
+};
 
 &mt {
   quick-tap-ms = <100>;
