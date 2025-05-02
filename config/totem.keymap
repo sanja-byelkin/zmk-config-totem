@@ -37,10 +37,11 @@
 };
 
 &mt {
-  quick-tap-ms = <100>;
+  quick-tap-ms = <150>;
   global-quick-tap;
   flavor = "tap-preferred";
   tapping-term-ms = <200>;
+//  require-prior-idle-ms = <125>;
 };
 
 / {
