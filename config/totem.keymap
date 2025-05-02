@@ -22,7 +22,8 @@
 #define BASE 0
 #define NAV  1
 #define SYM  2
-#define ADJ  3
+#define MOS  3
+#define ADJ  4
 
 
 &mmv {
@@ -94,7 +95,7 @@ label= "BASE"                              ;
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
                 &mt LGUI A  &mt LALT S  &mt LCTRL D &mt LSHFT F &mt RGUI G      &mt RALT H  &mt LSHFT J &mt LCTRL K &mt LALT L  &mt LGUI SEMI
     &kp NON_US_BSLH &kp Z   &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp APOS
-                                        &kp DEL     &lt NAV TAB &kp SPACE       &kp RET     &lt SYM ESC &kp BSPC
+                                        &lt MOS DEL &lt NAV TAB &kp SPACE       &kp RET     &lt SYM ESC &kp BSPC
                         >;
                 };
 
@@ -108,19 +109,19 @@ label= "NAVI"                              ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃   BR UP   ┃ SCRL UP   ┃  M UP     ┃ SCRL DN   ┃  MUTE     ┃   ┃   HOME    ┃  PG DN    ┃  PG UP    ┃    END    ┃   INS     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃   BR DN   ┃ M LEFT    ┃  M DOWN   ┃ M RIGHT   ┃ VOL UP    ┃   ┃   LEFT    ┃   DOWN    ┃     UP    ┃   RIGHT   ┃   DEL     ┃
+//             ┃   LGUI    ┃  LALT     ┃  LCTRL    ┃  LSHIFT   ┃ VOL UP    ┃   ┃   LEFT    ┃   DOWRN   ┃     UP    ┃   RIGHT   ┃   DEL     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃   LGUI    ┃  LALT     ┃  LCTRL    ┃  LSHIFT   ┃ VOL DN    ┃   ┃   MB 2    ┃  LSHIFT   ┃  LCTRL    ┃   LALT    ┃  LGUI     ┃   MB 3    ┃
+// ┃           ┃   BR DN   ┃           ┃           ┃           ┃ VOL DN    ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃           ┃           ┃   ┃   ADJ     ┃   MB 1    ┃   BSPC    ┃
+//                                     ┃  MOS      ┃           ┃           ┃   ┃   ADJ     ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-           &kp C_BRI_UP &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &kp C_MUTE     &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &kp INS
-           &kp C_BRI_DN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp C_VOL_UP &kp LEFT &kp DOWN    &kp UP      &kp RIGHT   &kp DEL
-    &trans      &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &kp C_VOL_DN    &mkp RCLK   &kp LSHFT   &kp LCTRL   &kp LALT    &kp LGUI    &mkp MCLK
-                                        &trans      &trans      &trans          &mo ADJ     &mkp LCLK   &kp BSPC
+               &kp C_BRI_UP &msc SCRL_UP &trans     &msc SCRL_DOWN &kp C_MUTE   &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &kp INS
+               &kp LGUI     &kp LALT    &kp LCTRL   &kp LSHFT   &kp C_VOL_UP    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp DEL
+    &trans     &kp C_BRI_DN &trans      &trans      &trans      &kp C_VOL_DN    &trans      &trans      &trans      &trans      &trans      &trans
+                                        &mo MOS     &trans      &trans          &mo ADJ     &trans      &trans
                         >;
                 };
 
@@ -147,6 +148,32 @@ label= "SYM"                               ;
                 &mt LGUI N1 &mt LALT N2 &mt LCTRL N3 &mt LSHFT N4 &mt RGUI N5   &mt RALT N6 &mt LSHFT N7 &mt LCTRL N8 &mt LALT N9 &mt LGUI N0
     &kp F12     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5          &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp F11
                                         &trans      &trans      &mo ADJ         &trans      &trans      &trans
+                        >;
+                };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+
+                ms_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "MOS"                               ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃ SCRL DN   ┃ SCRL UP   ┃           ┃           ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃   LGUI    ┃  LALT     ┃  LCTRL    ┃  LSHIFT   ┃           ┃   ┃ M LEFT    ┃ M DOWN    ┃   M UP    ┃ M RIGHT   ┃           ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃  MB LEFT  ┃ MB MIDDLE ┃ MB RIGHT  ┃           ┃           ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &trans      &trans      &trans      &trans      &trans          &trans      &msc SCRL_DOWN &msc SCRL_UP &trans   &trans
+                &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &trans       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &trans
+    &trans      &trans      &trans      &trans      &trans      &trans          &trans      &mkp LCLK   &mkp MCLK   &mkp RCLK    &trans    &trans
+                                        &trans      &trans      &trans          &trans      &trans      &trans
                         >;
                 };
 
