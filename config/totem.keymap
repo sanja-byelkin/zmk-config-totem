@@ -120,7 +120,7 @@ label= "NAVI"                              ;
 
                &kp C_BRI_UP &msc SCRL_UP &trans     &msc SCRL_DOWN &kp C_MUTE   &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &kp INS
                &kp LGUI     &kp LALT    &kp LCTRL   &kp LSHFT   &kp C_VOL_UP    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp DEL
-    &trans     &kp C_BRI_DN &trans      &trans      &trans      &kp C_VOL_DN    &trans      &trans      &trans      &trans      &trans      &trans
+    &kp PSCRN  &kp C_BRI_DN &trans      &trans      &trans      &kp C_VOL_DN    &trans      &trans      &trans      &trans      &trans      &kp PSCRN
                                         &mo MOS     &trans      &trans          &mo ADJ     &trans      &trans
                         >;
                 };
