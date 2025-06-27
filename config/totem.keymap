@@ -145,7 +145,7 @@ label= "NAVI"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                &kp C_BRI_UP &msc SCRL_UP &none      &msc SCRL_DOWN &kp C_MUTE   &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &kp INS
-               &kp LGUI     &kp LALT    &kp LCTRL   &kp LSHFT   &kp C_VOL_UP    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp DEL
+               &kp LGUI     &kp LALT    &kp LCTRL   &kp LSHFT   &kp C_VOL_UP    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &none
     &kp PSCRN  &kp C_BRI_DN &none       &none       &none       &kp C_VOL_DN    &none       &none       &none       &none       &none       &kp PSCRN
                                         &mo MOS     &trans      &trans          &mo ADJ     &trans      &trans
                         >;
